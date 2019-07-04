@@ -1,0 +1,33 @@
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="content_section">
+
+    <div class="col-sm text-center">
+        <h3 class="font-italic gtitle">Page for certification of passing Java Bootcamp</h3>
+    </div>
+</div>
+
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="sub_content_section">
+
+    <div class="col-sm text-center">
+        <h3 class="font-italic gtitle">Car details Page</h3>
+    </div>
+</div>
+
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="simple_car_table_section">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped">
+                <tr class="active">
+                    <th>Car name</th>
+                    <th>Car type</th>
+                </tr>
+
+                <tr th:each="c : ${cars}">
+                    <td th:text="${c.getName()}"></td>
+                    <td th:text="${c.getType()}"></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

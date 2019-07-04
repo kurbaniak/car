@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+    background-image: url("http://ocdn.eu/images/pulscms/Y2U7MDA_/23f99663f7671fda9b0a6fd44757ad9f.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*.mainPage {*/
+    /*height: 100%;*/
+    /*background-image: url("http://ocdn.eu/images/pulscms/Y2U7MDA_/23f99663f7671fda9b0a6fd44757ad9f.jpeg");*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+
+.gtitle {
+    color: chartreuse;
+    font-size: 3em;
+}
+
+.subPage {
+    height: 100%;
+    background-image: url("http://route-to-go.pl/images/samochody-flota_170079736.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
