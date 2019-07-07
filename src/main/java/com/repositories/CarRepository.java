@@ -2,8 +2,10 @@ package com.repositories;
 
 import com.models.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,4 +18,9 @@ public interface CarRepository extends JpaRepository<Car,Long> {
 
     @Query("select c from Car c where c.name = ?1")
     List<Car> findCarsByName(String param);
+
+    @Transactional
+    @Modifying
+    @Query("delete from Car c where c.name = ?1")
+    int deleteCarByName(String carName);
 }

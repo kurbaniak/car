@@ -4,10 +4,12 @@
 
 </head>
 <body>
-<span><a href="/detail">Detail Page</a>
-<div th:replace="document/content :: content_section">
-
-</div>
+<span><a href="/detail">Detail Page</a></span>
+<span><a href="/swagger-ui.html">Swagger Page</a>
+    <div th:replace="document/content :: content_section"></div>
+    <div th:replace="document/footer :: footer_section"></div>
 </span>
 </body>
+
+
 </html>

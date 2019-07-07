@@ -14,20 +14,51 @@
 
 <div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="simple_car_table_section">
 
-    <div class="row">
-        <div class="col-sm-12">
+
+
+        <div class="row">
+            <div class="col">ddddd</div>
+
+
+            <div class="col-6">
+
             <table class="table table-striped">
                 <tr class="active">
                     <th>Car name</th>
                     <th>Car type</th>
-                </tr>
-
-                <tr th:each="c : ${cars}">
-                    <td th:text="${c.getName()}"></td>
-                    <td th:text="${c.getType()}"></td>
-
+                    <th>Engine</th>
+                    <th>Year</th>
                 </tr>
             </table>
+
+            <table class="table table-striped">
+                <tr class="active">
+                    <th>Car name</th>
+                    <th>Car type</th>
+                    <th>Engine</th>
+                    <th>Year</th>
+                </tr>
+
+                <tr th:each="car : ${cars}">
+                    <td th:text="${car.getName()}"></td>
+                    <td th:text="${car.getType()}"></td>
+                    <td th:text="${#numbers.formatDecimal(car.getEngine(), 1, 1, 'POINT')}"></td>
+                    <td th:text="${car.getYear()}"></td>
+
+                </tr>
+
+            </table>
+            </div>
+
+            <div class="col">eeeeeeee</div>
+
         </div>
+
     </div>
+
+
+
+
+    </div>
+
 </div>

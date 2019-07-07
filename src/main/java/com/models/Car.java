@@ -21,7 +21,7 @@ public class Car {
     @Column(name = "car_type")
     private String type;
     @Column(name = "car_engine")
-    private Long engine;
+    private Double engine;
     @Column(name = "car_year")
     private Long year;
 }
