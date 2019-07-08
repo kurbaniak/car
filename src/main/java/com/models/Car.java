@@ -3,6 +3,7 @@ package com.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -23,5 +24,6 @@ public class Car {
     @Column(name = "car_engine")
     private Double engine;
     @Column(name = "car_year")
-    private Long year;
+//    private Long year;
+    private String year;
 }

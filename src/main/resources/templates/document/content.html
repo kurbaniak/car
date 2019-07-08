@@ -1,3 +1,18 @@
+<div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="navi_section">
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Main Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/detail">Details Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link navi" href="/swagger-ui.html">Swagger Page</a>
+        </li>
+    </ul>
+</div>
+
+
 <div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="content_section">
 
     <div class="col-sm text-center">
@@ -14,51 +29,25 @@
 
 <div class="container" xmlns:th="http://www.thymeleaf.org" th:fragment="simple_car_table_section">
 
-
-
         <div class="row">
-            <div class="col">ddddd</div>
 
+                <table class="table table-striped">
+                    <tr class="active">
+                        <th>Car name</th>
+                        <th>Car type</th>
+                        <th>Engine</th>
+                        <th>Year</th>
+                    </tr>
 
-            <div class="col-6">
+                    <tr th:each="car : ${cars}">
+                        <td th:text="${car.getName()}"></td>
+                        <td th:text="${car.getType()}"></td>
+                        <td th:text="${#numbers.formatDecimal(car.getEngine(), 1, 1, 'POINT')} +l"></td>
+                        <td th:text="${car.getYear()} + r."></td>
 
-            <table class="table table-striped">
-                <tr class="active">
-                    <th>Car name</th>
-                    <th>Car type</th>
-                    <th>Engine</th>
-                    <th>Year</th>
-                </tr>
-            </table>
+                     </tr>
 
-            <table class="table table-striped">
-                <tr class="active">
-                    <th>Car name</th>
-                    <th>Car type</th>
-                    <th>Engine</th>
-                    <th>Year</th>
-                </tr>
-
-                <tr th:each="car : ${cars}">
-                    <td th:text="${car.getName()}"></td>
-                    <td th:text="${car.getType()}"></td>
-                    <td th:text="${#numbers.formatDecimal(car.getEngine(), 1, 1, 'POINT')}"></td>
-                    <td th:text="${car.getYear()}"></td>
-
-                </tr>
-
-            </table>
-            </div>
-
-            <div class="col">eeeeeeee</div>
-
+                </table>
         </div>
-
-    </div>
-
-
-
-
-    </div>
 
 </div>

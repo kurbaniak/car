@@ -30,18 +30,18 @@ public class CarService {
 
     private void mockCar(){
         carRepository.save(Car.builder().
-                name("Car1")
-                .type("Type1")
-                .engine(1234.1)
-                .year(9876L)
+                name("Mazda")
+                .type("CX 5")
+                .engine(2.5)
+                .year("2019")
                 .build());
     }
     private void mockCar2(){
         carRepository.save(Car.builder().
-                name("Car2")
-                .type("Type1")
-                .engine(1234.3)
-                .year(9876L)
+                name("Honda")
+                .type("Accord")
+                .engine(2.2)
+                .year("2015")
                 .build());
     }
 

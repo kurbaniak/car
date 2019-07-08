@@ -13,7 +13,12 @@ body, html {
     /*background-size: cover;*/
     /*background-repeat: no-repeat;*/
 /*}*/
+.navi {
+    font-size: 1em;
+    font-kerning: auto;
 
+
+}
 .gtitle {
     color: chartreuse;
     font-size: 3em;
@@ -35,4 +40,8 @@ body, html {
     background-color:red;
     color: white;
     text-align: center;
+}
+.logo {
+    position: fixed;
+    right: 100%;
 }
